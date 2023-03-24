@@ -1,26 +1,25 @@
 #include "main.h"
 
 /**
-  *more_numbers - prints 10 times the numbers
-  */
+ * more_numbers - print more numbers
+ */
+
 void more_numbers(void)
 {
-	char i;
-	int count = 1;
+	int i, j;
 
-	do {
-		for (i = '0'; i <= '14'; i++)
+	for (i = 1; i <= 10; i++)
+	{
+		for (j = 0; j <= 14; j++)
+		{
+			if (j >= 10)
+				_putchar('1');
+			_putchar (j % 10 + '0');
 
-			_putchar(i);
-
-		count++;
-
+		}
 		_putchar('\n');
 
-	} while (count < 11);
+	}
 
 }
-
-
-
 
