@@ -16,6 +16,6 @@ char *_strpbrk(char *s, char *accept)
 		return (match);
 
 	else
-		return (NULL);
+		return (0);
 
 }
