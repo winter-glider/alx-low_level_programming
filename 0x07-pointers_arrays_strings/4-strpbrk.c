@@ -11,11 +11,11 @@ char *_strpbrk(char *s, char *accept)
 {
 	char *match = strpbrk(s, accept);
 
-	if (*match == strpbrk(s, accept))
+	if (match == strpbrk(s, accept))
 
 		return (match);
 
 	else
-		return (0);
+		return (NULL);
 
 }
