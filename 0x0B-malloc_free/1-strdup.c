@@ -10,40 +10,20 @@
   */
 char *_strdup(char *str)
 {
-	unsigned long int i, len;
-	char *str1;
+	unsigned long int len;
+	char *str1 = NULL;
 
-	if  (str == NULL)
+	if (str == NULL)
 	{
-		return (NULL);
-
-	}
-
-	len = strlen(str + 1);
-
-	str1 = malloc(sizeof(char) * len);
-
-	if (str1 < str)
-	{
-		return (NULL);
-
-	}
-
-	else
-	{
-		for (i = 0; i <= len; i++)
-		{
-			str1[i] = str[i];
-
-		}
+		str1 = malloc(strlen(str) + 1);
+		if (str1)
+			strcpy(str1, str);
 
 	}
 
 	return (str1);
 
 
-
-	free(str1);
 
 }
 
