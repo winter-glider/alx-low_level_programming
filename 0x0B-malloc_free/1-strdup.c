@@ -10,10 +10,10 @@
   */
 char *_strdup(char *str)
 {
-	
+
 	char *str1 = NULL;
 
-	if (str == NULL)
+	if (str)
 	{
 		str1 = malloc(strlen(str) + 1);
 		if (str1)
