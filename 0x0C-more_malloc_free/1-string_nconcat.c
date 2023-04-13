@@ -28,26 +28,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (n >= len2)
 	{
-		return (s2);
+		n = len2;
 	}
 
-	ptr = malloc(len1 + len2 + 1);
+	ptr = malloc(len1 + n + 1);
 
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	else
-	{
-		memcpy(ptr, s1, len1);
-		memcpy(ptr, s2, len2 + 1);
-	}
+
+	memcpy(ptr, s1, len1);
+	memcpy(ptr + len1, s2, n);
+	ptr[len1 + n] = '\0';
 
 	return (ptr);
 
 	free(ptr);
-
-
 
 
 }
