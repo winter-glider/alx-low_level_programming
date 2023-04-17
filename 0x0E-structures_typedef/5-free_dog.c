@@ -2,13 +2,18 @@
 #include <stdlib.h>
 
 /**
-  *free_dog - free d
+  *free_dog - free the dogs
   *@d: pointer to struct
   *
   */
 void free_dog(dog_t *d)
 {
-	free(d->name);
-	free(d->owner);
-	free(d);
+	if (d)
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+
+	}
+
 }
