@@ -6,9 +6,10 @@
   *@f: pointer to a function
   *Return: nothing
   */
+
 void print_name(char *name, void (*f)(char *))
 {
-	if (f && name)
+	if (f && name != NULL)
 		f(name);
 
 }
