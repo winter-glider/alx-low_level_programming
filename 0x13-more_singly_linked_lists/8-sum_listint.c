@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
-  *sum-listint - sum of all the(n) of a listint_t linked list.
+  *sum_listint - sum of all the(n) of a listint_t linked list.
   *@head: head of list
   *Return: sum of data n
   */
